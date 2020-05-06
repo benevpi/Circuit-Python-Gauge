@@ -5,25 +5,6 @@ import time
 from gauge import Gauge
 
 display = board.DISPLAY
-
-#basics working.
-#TodDo -- graphical niceties
-### Add a circle at the bottom
-### Add a text number display
-### Maybe some options for coloured backgrounds
-### Maybe a warning threshold?
-# speed optimisations
-#flip it the right way up!
-#always have it from 45 deg to 45 deg. Everything is a lot easier then.
-
-#test at different sizes
-## current fps @ 240x240 circa 6
-
-#Do an arc-style one
-
-#problem -- aliasing gives is a dip in the middle. Not too sure what I can do about this.
-# not too sure about  the best thing here. Could detect this and boost the length at exactly the mid point
-#Outline fixes this, but at the expense of about doubling the refresh rate
   
 
 colour_fade=[

@@ -10,7 +10,7 @@ class Gauge(displayio.Group):
     def __init__(self, min_val, max_val, width, height, base_size=8, 
                  colour=0x0000FF, outline_colour=0x0000FF, outline = True, bg_colour=0000000, display_value=True, 
                  value_label="", arc_colour=0xFF0000, colour_fade=False):
-        super().__init__(max_size=20)
+        super().__init__()
         self.pivot1=[(width//2)-(base_size//2), 0]
         self.pivot2=[(width//2)+(base_size//2), 0]
         self.mid=width//2
@@ -28,7 +28,7 @@ class Gauge(displayio.Group):
         else: self.arrow = Triangle(self.pivot1[0],self.length, self.pivot2[0], self.length, self.mid,
                      0, fill=self.colour)
                      
-        self.data = Label(terminalio.FONT, text="0.0", color=0xFFFFFF, max_glyphs=10)
+        self.data = Label(terminalio.FONT, text="0.0", color=0xFFFFFF)
         self.data.x = width//2
         self.data.y = (height - self.length)//2
         if display_value: super().append(self.data)
